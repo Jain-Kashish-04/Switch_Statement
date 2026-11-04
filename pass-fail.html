@@ -4,12 +4,30 @@
 		<title>
 			Creating a pass fail task
 		</title>
+		
+		<style>
+			input{
+				height:50px;
+				width :200px;
+				border : 2px solid black;
+				font-size:20px;
+				
+			}
+			
+			button{
+				height:50px;
+				width :100px;
+				margin-left:20px;
+				border : 2px solid black;
+				font-size:20px;
+			}
+		</style>
 	</head>
 	
 	
 	<body>
 		<input type="numbers" id="marks" placeholder="Enter a marks" >
-		<button type="button" onclick="check()">check the grade</button>
+		<button type="button" onclick="check()">check</button>
 		
 		<p id="result">  </p>
 		<script>
@@ -20,27 +38,26 @@
 			
 				switch(true){
 				
-					case():
-					document.getElementById('result').innerHTML = "PASS With A Grade A";
+					case(marks >= 90 && marks <= 100):
+					document.getElementById('result').innerHTML = "Outstanding you are pass with Grade A";
 					break;
 				
-					case() :
-					document.getElementById('result').innerHTML = "PASS With A Grade B";
+					case(marks >= 75 && marks <= 90):
+					document.getElementById('result').innerHTML = "Excellent you are pass with Grade B";
 					break;
 				
-					case() :
-					document.getElementById('result').innerHTML = "PASS With A Grade C";
+					case(marks >= 50 && marks <= 75):
+					document.getElementById('result').innerHTML = "Good you are pss with Grade C";
 					break;
 				
-					case() :
-					document.getElementById('result').innerHTML = "PASS With A Grade D";
+					case(marks >= 35 && marks <= 50):
+					document.getElementById('result').innerHTML = "Fair you are pass with Grade D";
 					break; 
 					
 					default:
-					document.getElementById('result').innerHTML = " FAIL";
+					document.getElementById('result').innerHTML = " Sorry you are Fail";
 					
 				}
-
 			}
 			
 		</script>
