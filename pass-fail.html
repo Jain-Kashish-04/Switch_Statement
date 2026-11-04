@@ -8,10 +8,41 @@
 	
 	
 	<body>
-	
+		<input type="numbers" id="marks" placeholder="Enter a marks" >
+		<button type="button" onclick="check()">check the grade</button>
+		
+		<p id="result">  </p>
 		<script>
-		
-		
+			
+			function check(){
+			
+				let marks = Number(document.getElementById('marks').value);
+			
+				switch(true){
+				
+					case():
+					document.getElementById('result').innerHTML = "PASS With A Grade A";
+					break;
+				
+					case() :
+					document.getElementById('result').innerHTML = "PASS With A Grade B";
+					break;
+				
+					case() :
+					document.getElementById('result').innerHTML = "PASS With A Grade C";
+					break;
+				
+					case() :
+					document.getElementById('result').innerHTML = "PASS With A Grade D";
+					break; 
+					
+					default:
+					document.getElementById('result').innerHTML = " FAIL";
+					
+				}
+
+			}
+			
 		</script>
 	</body>
 </html>
