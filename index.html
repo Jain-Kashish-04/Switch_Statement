@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript switch</h2>
+<a href="file:///C:/Users/Kashish/OneDrive/Desktop/JAVASCRIPT/switch%20case/pass-fail.html">Go to this link to see the pass-fail code</a>
+
+<p id="demo"></p>
+
+<script>
+let day;
+console.log(new Date().getDay());
+switch (9) {
+  case 0:
+    day = "Sunday";
+    break;
+  case 1:
+    day = "Monday";
+    break;
+  case 2:
+    day = "Tuesday";
+    break;
+  case 3:
+    day = "Wednesday";
+    break;
+  case 4:
+    day = "Thursday";
+    break;
+  case 5:
+    day = "Friday";
+    break;
+  case  6:
+    day = "Saturday";
+	break;
+	
+	default:
+	day = 'not matched';
+}
+document.getElementById("demo").innerHTML = "Today is " + day;
+</script>
+
+</body>
+</html>
