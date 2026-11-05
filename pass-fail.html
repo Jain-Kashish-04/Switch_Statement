@@ -26,7 +26,7 @@
 	
 	
 	<body>
-		<input type="numbers" id="marks" placeholder="Enter a marks" >
+		<input type="text" id="marks" placeholder="Enter a marks" >
 		<button type="button" onclick="check()">check</button>
 		
 		<p id="result">  </p>
@@ -35,10 +35,14 @@
 			function check(){
 			
 				let marks = Number(document.getElementById('marks').value);
+				
+				//if(typeof marks === String){
+				//	document.write('Text is not allowed -> use numbers only ');
+				//}
 			
 				switch(true){
 				
-					case(marks >= 90 && marks <= 100):
+					case(marks >= 90 && marks == 100):
 					document.getElementById('result').innerHTML = "Outstanding you are pass with Grade A";
 					break;
 				
@@ -53,6 +57,18 @@
 					case(marks >= 35 && marks <= 50):
 					document.getElementById('result').innerHTML = "Fair you are pass with Grade D";
 					break; 
+					
+					case(marks < 0):
+					document.getElementById('result').innerHTML = "Invalid Number";
+					break;
+					
+					case(marks > 100):
+					document.getElementById('result').innerHTML = "Use Numbers between 0 to 100";
+					break;
+					
+					case(isNaN(marks)):
+					document.getElementById('result').innerHTML = "Text is not allowed -> use numbers only ";
+					break;
 					
 					default:
 					document.getElementById('result').innerHTML = " Sorry you are Fail";
