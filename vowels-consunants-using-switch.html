@@ -1,18 +1,53 @@
-<DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>
 			Volwels and consunants using Switch case
 		</title>
+		
+		<style>
+			input{
+				height:50px;
+				width :200px;
+				border : 2px solid black;
+				font-size:20px;
+				
+			}
+			
+			button{
+				height:50px;
+				width :100px;
+				margin-left:20px;
+				border : 2px solid black;
+				font-size:20px;
+			}
+		
+		</style>
 	</head>
 	
 	<body>
-	
-		<input type="text" id="check" placeholder="Type Something">
-		<button type="button" onclick=""> click </button>
+		<input type="text" id="ch" placeholder="Type Something">
+		<button type="button" onclick="Vowels()"> click </button>
 		
+		<p id="result">  </p>
 		<script>
-	
+		
+			function Vowels(){
+			
+				let ch = document.getElementById('ch').value;
+				switch(ch.toLowerCase()){
+					case 'a':
+					case 'e':
+					case 'i':
+					case 'o':
+					case 'u':
+						document.getElementById('result').innerHTML = "vowels";
+						break; 
+						
+					default :
+					document.getElementById('result').innerHTML = "consunants";
+				}
+			}
 	
 		</script>
 	</body>
