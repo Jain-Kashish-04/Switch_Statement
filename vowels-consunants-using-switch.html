@@ -34,19 +34,36 @@
 		
 			function Vowels(){
 			
-				let ch = document.getElementById('ch').value;
-				switch(ch.toLowerCase()){
-					case 'a':
-					case 'e':
-					case 'i':
-					case 'o':
-					case 'u':
-						document.getElementById('result').innerHTML = "vowels";
-						break; 
-						
-					default :
-					document.getElementById('result').innerHTML = "consunants";
+				let ch = document.getElementById('ch').value.toLowerCase();
+				let vowels = 0;
+				let consunants = 0 ;
+				
+				for(let i = 0 ; i < ch.length ; i++){
+					
+					switch(true){
+					
+						case('aeiou'.includes(ch[i])):
+						vowels++;
+						break;
+					
+						case('bcdfghjklmnpqrstvwxyz'.includes(ch[i])):
+						consunants++;
+						break;
+					}
 				}
+				
+				switch(true){
+				
+					case(vowels == 0 && consunants == 0):
+					document.getElementById('result').innerHTML = 'not a vowel and not a consunants';
+					break;
+					
+					default:
+						document.getElementById('result').innerHTML = "Vowels: " + vowels +
+						"<br>Consunants: " + consunants;
+					
+				}
+				
 			}
 	
 		</script>
